@@ -2,7 +2,7 @@
  <head lang="es">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>SECCION DE LICENCIAS AAGE</title>
     <!-- Archivo CSS principal -->
     <link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="header.css">
@@ -122,6 +122,71 @@
             border: none;
             cursor: pointer;
         }
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .top-bar .right {
+                justify-content: flex-start;
+                margin-top: 10px;
+            }
+            .header {
+                padding: 10px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .header .left-logo, .header .right-logo {
+                position: static;
+                margin-bottom: 10px;
+            }
+            .nav-bar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-bar .search {
+                width: 100%;
+            }
+            .nav-bar .search input {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 20px;
+            }
+            .top-bar .left span, .top-bar .right span, .top-bar .right a {
+                font-size: 12px;
+            }
+            .nav-bar ul li a {
+                font-size: 14px;
+            }
+            .nav-bar .search input {
+                font-size: 14px;
+            }
+        }
+        .boton-regresar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    padding: 0.5em 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-regresar:hover {
+    background-color: #45a049;
+}
   </style>
  </head>
  <body>
@@ -155,11 +220,26 @@
      </a>
     </li>
     <li>
+        <li>
+            <a href="reglamentos.html">
+            Reglamentos
+            </a>
+           </li>
+           <li>
+
      <a href="#tramites">
       Tramites
      </a>
     </li>
     <li>
+
+        <li>
+            <a href="formularios.html">
+            Formularios
+            </a>
+           </li>
+           <li>
+
      <a href="#contactos">
       Contactos
      </a>
@@ -173,7 +253,7 @@
 
    <!-- Sección ORGANIGRAMA -->
    <section id="Organigrama" class="organograma">
-    <h2 style="font-size: 28px; font-weight: bold; margin-bottom: 20px; ">ORGANIGRAMA DE LA SECCION</h2>
+    <h2 style="font-size: 28px; font-weight: bold; margin-bottom: 20px; ">ORGANIGRAMA</h2>
     <img src="jefe.jpg" alt="Jefe de Sección" class="jefe-img">
     <div class="jefe-caption">
         <p>JEFE DE SECCION DE LICENCIAS DEL PERSONAL</p>
@@ -218,7 +298,8 @@
         </td>
     </tr>
 </table>
-
+<button class="boton-regresar" onclick="scrollToTop()">Regresar a Cabecera</button>
+</section>
 <!-- Nueva sección ACTIVIDADES -->
 <section id="actividades" class="actividades">
     <h2 style="font-size: 28px; font-weight: bold; margin-bottom: 20px; ">ACTIVIDADES DEL SERVICIO</h2>
@@ -249,6 +330,7 @@
             <p style="color:#ccc;">El servicio se encarga de gestionar los certificados médicos del personal aeronáutico.</p>
         </div>
     </div>
+    <button class="boton-regresar" onclick="scrollToTop()">Regresar a Cabecera</button>
 </section>
 
 <!-- Nueva sección TRÁMITES -->
@@ -276,6 +358,7 @@
             <p>Certificaciones de competencia técnica para pilotos y personal de vuelo</p>
         </div>
     </div>
+    <button class="boton-regresar" onclick="scrollToTop()">Regresar a Cabecera</button>
 </section>
 
 
@@ -295,9 +378,11 @@
         <!-- Sección para el correo -->
         <div class="container">
             <img src="email.png" alt="Correo" class="icon">
-            <a href="mailto:info@autoridaeronautica.gq">info@autoridaeronautica.gq</a>
+            <a href="mailto:oficina-pel@aage.info">oficina-pel@aage.info</a>
         </div>
     </div>
+    <button class="boton-regresar" onclick="scrollToTop()">Regresar a Cabecera</button>
+    <button class="boton-regresar" onclick="scrollToTop()">Regresar a Cabecera</button>
 </section>
 
 
@@ -306,4 +391,6 @@
  <footer>
     <p style="color:white;">© 2024 aage.info. Todos los derechos reservados.</p>
 </footer>
+<!-- Enlace al archivo JavaScript -->
+<script src="script.js"></script>
 </html>
